@@ -100,6 +100,17 @@
                     <view key="view" contentMode="scaleToFill" id="hD1-eX-Y4S">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yI7-L5-QWw">
+                                <rect key="frame" x="159" y="353" width="75" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Button"/>
+                                <connections>
+                                    <action selector="logoutButtonTapped:" destination="fBw-Wh-PiP" eventType="touchUpInside" id="dlS-hQ-2Mm"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="DgX-8N-qKi"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>

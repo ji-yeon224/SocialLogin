@@ -113,7 +113,7 @@ final class LoginViewController: UIViewController {
                                     }
                                 }
                                 
-                                UserDefaults.standard.set("kakao", forKey: "platform")
+                                UserDefaults.standard.set("kakao", forKey: "Platform")
                                 self.present(MainViewController(), animated: true)
                             }
                         }
@@ -155,7 +155,7 @@ extension LoginViewController: ASAuthorizationControllerDelegate {
             
             if email?.isEmpty ?? true {
                 let result = decode(jwtToken: tokenToString)
-                print("TOEKN DECODE", result["email"])
+                print("APPLE TOEKN DECODE", result["email"])
             }
             if let fullName = fullName {
                 print(fullName)

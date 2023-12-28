@@ -8,6 +8,7 @@
 import UIKit
 import AuthenticationServices
 import KakaoSDKAuth
+import KakaoSDKUser
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -18,26 +19,38 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
-//        guard let user = UserDefaults.standard.string(forKey: "User") else {
-//            print("No User")
-//            return
-//        }
-//        
-//        let appleIDProvider = ASAuthorizationAppleIDProvider()
-//        appleIDProvider.getCredentialState(forUserID: user) { credentialState, error in
-//            switch credentialState {
-//            case .revoked:
-//                print("revoked")
-//            case .authorized:
-//                DispatchQueue.main.async {
-//                    let window = UIWindow(windowScene: windowScene)
-//                    window.rootViewController = MainViewController()
-//                    self.window = window
-//                    window.makeKeyAndVisible()
-//                }
-//            default: print("Not Found")
-//            }
-//        }
+        guard let platform = UserDefaults.standard.string(forKey: "Platform") else {
+            return
+        }
+        
+        switch platform {
+        case "apple":
+            guard let user = UserDefaults.standard.string(forKey: "User") else {
+                print("No User")
+                return
+            }
+            
+            let appleIDProvider = ASAuthorizationAppleIDProvider()
+            appleIDProvider.getCredentialState(forUserID: user) { credentialState, error in
+                switch credentialState {
+                case .revoked:
+                    print("revoked")
+                case .authorized:
+                    DispatchQueue.main.async {
+                        let window = UIWindow(windowScene: windowScene)
+                        window.rootViewController = MainViewController()
+                        self.window = window
+                        window.makeKeyAndVisible()
+                    }
+                default: print("Not Found")
+                }
+            }
+        case "kakao":
+            print("kakao")
+        default: break
+        }
+        
+        
         
     }
     
