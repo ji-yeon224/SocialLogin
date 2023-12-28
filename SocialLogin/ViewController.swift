@@ -8,12 +8,7 @@
 import UIKit
 import AuthenticationServices
 
-class MainViewController: UIViewController {
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = .systemPink
-    }
-}
+
 
 class ViewController: UIViewController {
 
@@ -102,7 +97,7 @@ extension ViewController: ASAuthorizationControllerDelegate {
             
             let userName = passwordCredential.user
             let password = passwordCredential.password
-            
+            print(userName, password)
         default: break
         }
         
