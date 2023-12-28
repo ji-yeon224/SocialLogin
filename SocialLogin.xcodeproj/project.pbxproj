@@ -49,6 +49,7 @@
 		CE128F012B3D02C1007AC8F0 /* SocialLoginUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SocialLoginUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE128F052B3D02C1007AC8F0 /* SocialLoginUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialLoginUITests.swift; sourceTree = "<group>"; };
 		CE128F072B3D02C1007AC8F0 /* SocialLoginUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialLoginUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CE128F142B3D0A5D007AC8F0 /* SocialLogin.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SocialLogin.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +100,7 @@
 		CE128EE32B3D02C0007AC8F0 /* SocialLogin */ = {
 			isa = PBXGroup;
 			children = (
+				CE128F142B3D0A5D007AC8F0 /* SocialLogin.entitlements */,
 				CE128EE42B3D02C0007AC8F0 /* AppDelegate.swift */,
 				CE128EE62B3D02C0007AC8F0 /* SceneDelegate.swift */,
 				CE128EE82B3D02C0007AC8F0 /* ViewController.swift */,
@@ -440,6 +442,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SocialLogin/SocialLogin.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = DJP8DYB9HG;
@@ -468,6 +471,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SocialLogin/SocialLogin.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = DJP8DYB9HG;
