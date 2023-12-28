@@ -7,6 +7,7 @@
 
 import UIKit
 import AuthenticationServices
+import KakaoSDKUser
 
 final class LoginViewController: UIViewController {
     
@@ -37,10 +38,93 @@ final class LoginViewController: UIViewController {
     }
     
     @objc private func kakaoLoginTapped() {
-        
+        // 카카오톡 앱 로그인
+        if (UserApi.isKakaoTalkLoginAvailable()) {
+            UserApi.shared.loginWithKakaoTalk {(oauthToken, error) in
+                if let error = error {
+                    print(error)
+                }
+                else {
+                    print("loginWithKakaoTalk() success.")
+                    self.getUserInfo()
+                }
+            }
+        } else { // 웹으로 로그인
+            UserApi.shared.loginWithKakaoAccount {(oauthToken, error) in
+                if let error = error {
+                    print(error)
+                }
+                else {
+                    print("loginWithKakaoAccount() success.")
+                    self.getUserInfo()
+                    //do something
+                    _ = oauthToken
+                }
+            }
+        }
     }
     
-    
+    private func getUserInfo() {
+        UserApi.shared.me() { (user, error) in
+            if let error = error {
+                print(error)
+            }
+            else {
+                if let user = user {
+                    var scopes = [String]()
+                    
+                    if (user.kakaoAccount?.profileNeedsAgreement == true) { scopes.append("profile") }
+                    if (user.kakaoAccount?.emailNeedsAgreement == true) { scopes.append("account_email") }
+                    
+                    scopes.append("openid")
+                    
+                    if scopes.count > 0 {
+                        print("사용자에게 추가 동의를 받아야 합니다.")
+
+                        // OpenID Connect 사용 시
+                        // scope 목록에 "openid" 문자열을 추가하고 요청해야 함
+                        // 해당 문자열을 포함하지 않은 경우, ID 토큰이 재발급되지 않음
+                        // scopes.append("openid")
+                        
+                        //scope 목록을 전달하여 카카오 로그인 요청
+                        UserApi.shared.loginWithKakaoAccount(scopes: scopes) { (oauthToken, error) in
+                            if let error = error {
+                                print(error)
+                            }
+                            else {
+                                if let oauthToken = oauthToken {
+                                    // oauthToken.idToken -> openid
+                                    print(oauthToken.accessToken)
+                                    print(oauthToken.refreshToken)
+                                }
+                                UserApi.shared.me() { (user, error) in
+                                    if let error = error {
+                                        print(error)
+                                    }
+                                    else {
+                                        print("me() success.")
+                                        
+                                        if let user = user, let account = user.kakaoAccount {
+                                            print(account.email ?? "NO EMAIL")
+                                        }
+                                        print(user?.kakaoAccount?.profile?.nickname)
+                                        
+                                        
+                                    }
+                                }
+                                
+                                UserDefaults.standard.set("kakao", forKey: "platform")
+                                self.present(MainViewController(), animated: true)
+                            }
+                        }
+                    }
+                    else {
+                        print("사용자의 추가 동의가 필요하지 않습니다.")
+                    }
+                }
+            }
+        }
+    }
 }
 
 
@@ -71,13 +155,17 @@ extension LoginViewController: ASAuthorizationControllerDelegate {
             
             if email?.isEmpty ?? true {
                 let result = decode(jwtToken: tokenToString)
-                print(result)
+                print("TOEKN DECODE", result["email"])
+            }
+            if let fullName = fullName {
+                print(fullName)
             }
             
             UserDefaults.standard.set(userIdentifier, forKey: "User")
             UserDefaults.standard.set("apple", forKey: "Platform")
             
             DispatchQueue.main.async {
+                
                 self.present(MainViewController(), animated: true)
             }
             
