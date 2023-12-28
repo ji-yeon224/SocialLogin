@@ -18,6 +18,8 @@
 		CE128F082B3D02C1007AC8F0 /* SocialLoginUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE128F072B3D02C1007AC8F0 /* SocialLoginUITestsLaunchTests.swift */; };
 		CE128F172B3D6563007AC8F0 /* KakaoSDK in Frameworks */ = {isa = PBXBuildFile; productRef = CE128F162B3D6563007AC8F0 /* KakaoSDK */; };
 		CE128F192B3D6620007AC8F0 /* .gitIgnore in Resources */ = {isa = PBXBuildFile; fileRef = CE128F182B3D6620007AC8F0 /* .gitIgnore */; };
+		CE128F1B2B3D666C007AC8F0 /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE128F1A2B3D666C007AC8F0 /* APIKey.swift */; };
+		CE128F1D2B3D66CF007AC8F0 /* KakaoLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE128F1C2B3D66CF007AC8F0 /* KakaoLoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		CE128F072B3D02C1007AC8F0 /* SocialLoginUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialLoginUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		CE128F142B3D0A5D007AC8F0 /* SocialLogin.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SocialLogin.entitlements; sourceTree = "<group>"; };
 		CE128F182B3D6620007AC8F0 /* .gitIgnore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitIgnore; sourceTree = "<group>"; };
+		CE128F1A2B3D666C007AC8F0 /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
+		CE128F1C2B3D66CF007AC8F0 /* KakaoLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoLoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +117,8 @@
 				CE128EEF2B3D02C1007AC8F0 /* LaunchScreen.storyboard */,
 				CE128EF22B3D02C1007AC8F0 /* Info.plist */,
 				CE128F182B3D6620007AC8F0 /* .gitIgnore */,
+				CE128F1A2B3D666C007AC8F0 /* APIKey.swift */,
+				CE128F1C2B3D66CF007AC8F0 /* KakaoLoginViewController.swift */,
 			);
 			path = SocialLogin;
 			sourceTree = "<group>";
@@ -274,6 +280,8 @@
 			files = (
 				CE128EE92B3D02C0007AC8F0 /* ViewController.swift in Sources */,
 				CE128EE52B3D02C0007AC8F0 /* AppDelegate.swift in Sources */,
+				CE128F1D2B3D66CF007AC8F0 /* KakaoLoginViewController.swift in Sources */,
+				CE128F1B2B3D666C007AC8F0 /* APIKey.swift in Sources */,
 				CE128EE72B3D02C0007AC8F0 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

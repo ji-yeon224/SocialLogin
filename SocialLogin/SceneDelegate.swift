@@ -7,6 +7,7 @@
 
 import UIKit
 import AuthenticationServices
+import KakaoSDKAuth
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -17,27 +18,36 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
-        guard let user = UserDefaults.standard.string(forKey: "User") else {
-            print("No User")
-            return
-        }
+//        guard let user = UserDefaults.standard.string(forKey: "User") else {
+//            print("No User")
+//            return
+//        }
+//        
+//        let appleIDProvider = ASAuthorizationAppleIDProvider()
+//        appleIDProvider.getCredentialState(forUserID: user) { credentialState, error in
+//            switch credentialState {
+//            case .revoked:
+//                print("revoked")
+//            case .authorized:
+//                DispatchQueue.main.async {
+//                    let window = UIWindow(windowScene: windowScene)
+//                    window.rootViewController = MainViewController()
+//                    self.window = window
+//                    window.makeKeyAndVisible()
+//                }
+//            default: print("Not Found")
+//            }
+//        }
         
-        let appleIDProvider = ASAuthorizationAppleIDProvider()
-        appleIDProvider.getCredentialState(forUserID: user) { credentialState, error in
-            switch credentialState {
-            case .revoked:
-                print("revoked")
-            case .authorized:
-                DispatchQueue.main.async {
-                    let window = UIWindow(windowScene: windowScene)
-                    window.rootViewController = MainViewController()
-                    self.window = window
-                    window.makeKeyAndVisible()
-                }
-            default: print("Not Found")
+    }
+    
+    func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
+        if let url = URLContexts.first?.url {
+            if (AuthApi.isKakaoTalkLoginUrl(url)) {
+                _ = AuthController.handleOpenUrl(url: url)
             }
         }
-        
+
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
