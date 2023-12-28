@@ -16,6 +16,8 @@
 		CE128EFC2B3D02C1007AC8F0 /* SocialLoginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE128EFB2B3D02C1007AC8F0 /* SocialLoginTests.swift */; };
 		CE128F062B3D02C1007AC8F0 /* SocialLoginUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE128F052B3D02C1007AC8F0 /* SocialLoginUITests.swift */; };
 		CE128F082B3D02C1007AC8F0 /* SocialLoginUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE128F072B3D02C1007AC8F0 /* SocialLoginUITestsLaunchTests.swift */; };
+		CE128F172B3D6563007AC8F0 /* KakaoSDK in Frameworks */ = {isa = PBXBuildFile; productRef = CE128F162B3D6563007AC8F0 /* KakaoSDK */; };
+		CE128F192B3D6620007AC8F0 /* .gitIgnore in Resources */ = {isa = PBXBuildFile; fileRef = CE128F182B3D6620007AC8F0 /* .gitIgnore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,7 @@
 		CE128F052B3D02C1007AC8F0 /* SocialLoginUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialLoginUITests.swift; sourceTree = "<group>"; };
 		CE128F072B3D02C1007AC8F0 /* SocialLoginUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialLoginUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		CE128F142B3D0A5D007AC8F0 /* SocialLogin.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SocialLogin.entitlements; sourceTree = "<group>"; };
+		CE128F182B3D6620007AC8F0 /* .gitIgnore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitIgnore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE128F172B3D6563007AC8F0 /* KakaoSDK in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,6 +112,7 @@
 				CE128EED2B3D02C1007AC8F0 /* Assets.xcassets */,
 				CE128EEF2B3D02C1007AC8F0 /* LaunchScreen.storyboard */,
 				CE128EF22B3D02C1007AC8F0 /* Info.plist */,
+				CE128F182B3D6620007AC8F0 /* .gitIgnore */,
 			);
 			path = SocialLogin;
 			sourceTree = "<group>";
@@ -145,6 +150,9 @@
 			dependencies = (
 			);
 			name = SocialLogin;
+			packageProductDependencies = (
+				CE128F162B3D6563007AC8F0 /* KakaoSDK */,
+			);
 			productName = SocialLogin;
 			productReference = CE128EE12B3D02C0007AC8F0 /* SocialLogin.app */;
 			productType = "com.apple.product-type.application";
@@ -217,6 +225,9 @@
 				Base,
 			);
 			mainGroup = CE128ED82B3D02C0007AC8F0;
+			packageReferences = (
+				CE128F152B3D6563007AC8F0 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */,
+			);
 			productRefGroup = CE128EE22B3D02C0007AC8F0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -233,6 +244,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE128F192B3D6620007AC8F0 /* .gitIgnore in Resources */,
 				CE128EF12B3D02C1007AC8F0 /* LaunchScreen.storyboard in Resources */,
 				CE128EEE2B3D02C1007AC8F0 /* Assets.xcassets in Resources */,
 				CE128EEC2B3D02C0007AC8F0 /* Main.storyboard in Resources */,
@@ -611,6 +623,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CE128F152B3D6563007AC8F0 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kakao/kakao-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.20.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CE128F162B3D6563007AC8F0 /* KakaoSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE128F152B3D6563007AC8F0 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDK;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CE128ED92B3D02C0007AC8F0 /* Project object */;
 }
