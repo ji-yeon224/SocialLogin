@@ -22,6 +22,7 @@
 		CE128F1D2B3D66CF007AC8F0 /* KakaoLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE128F1C2B3D66CF007AC8F0 /* KakaoLoginViewController.swift */; };
 		CE128F1F2B3D8675007AC8F0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE128F1E2B3D8675007AC8F0 /* LoginViewController.swift */; };
 		CE128F212B3D8726007AC8F0 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE128F202B3D8726007AC8F0 /* MainViewController.swift */; };
+		CE95DEF02B3E63520073A197 /* AuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE95DEEF2B3E63520073A197 /* AuthenticationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		CE128F1C2B3D66CF007AC8F0 /* KakaoLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoLoginViewController.swift; sourceTree = "<group>"; };
 		CE128F1E2B3D8675007AC8F0 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		CE128F202B3D8726007AC8F0 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		CE95DEEF2B3E63520073A197 /* AuthenticationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 				CE128F1C2B3D66CF007AC8F0 /* KakaoLoginViewController.swift */,
 				CE128F1E2B3D8675007AC8F0 /* LoginViewController.swift */,
 				CE128F202B3D8726007AC8F0 /* MainViewController.swift */,
+				CE95DEEF2B3E63520073A197 /* AuthenticationManager.swift */,
 			);
 			path = SocialLogin;
 			sourceTree = "<group>";
@@ -285,6 +288,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE128F212B3D8726007AC8F0 /* MainViewController.swift in Sources */,
+				CE95DEF02B3E63520073A197 /* AuthenticationManager.swift in Sources */,
 				CE128F1F2B3D8675007AC8F0 /* LoginViewController.swift in Sources */,
 				CE128EE92B3D02C0007AC8F0 /* ViewController.swift in Sources */,
 				CE128EE52B3D02C0007AC8F0 /* AppDelegate.swift in Sources */,

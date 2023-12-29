@@ -17,13 +17,18 @@ final class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        view.backgroundColor = .secondarySystemBackground
         appleLoginButton.addTarget(self, action: #selector(appleLoginTapped), for: .touchUpInside)
         kakaoLoginButton.addTarget(self, action: #selector(kakaoLoginTapped), for: .touchUpInside)
         
     }
     
     
+    @IBAction func faceIdTapped(_ sender: UIButton) {
+        
+        AuthenticationManager.shared.auth()
+        
+    }
     @objc private func appleLoginTapped() {
         
         let appleIdProvider = ASAuthorizationAppleIDProvider()
