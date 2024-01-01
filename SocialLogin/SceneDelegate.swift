@@ -23,32 +23,32 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             return
         }
         
-        switch platform {
-        case "apple":
-            guard let user = UserDefaults.standard.string(forKey: "User") else {
-                print("No User")
-                return
-            }
-            
-            let appleIDProvider = ASAuthorizationAppleIDProvider()
-            appleIDProvider.getCredentialState(forUserID: user) { credentialState, error in
-                switch credentialState {
-                case .revoked:
-                    print("revoked")
-                case .authorized:
-                    DispatchQueue.main.async {
-                        let window = UIWindow(windowScene: windowScene)
-                        window.rootViewController = MainViewController()
-                        self.window = window
-                        window.makeKeyAndVisible()
-                    }
-                default: print("Not Found")
-                }
-            }
-        case "kakao":
-            print("kakao")
-        default: break
-        }
+//        switch platform {
+//        case "apple":
+//            guard let user = UserDefaults.standard.string(forKey: "User") else {
+//                print("No User")
+//                return
+//            }
+//            
+//            let appleIDProvider = ASAuthorizationAppleIDProvider()
+//            appleIDProvider.getCredentialState(forUserID: user) { credentialState, error in
+//                switch credentialState {
+//                case .revoked:
+//                    print("revoked")
+//                case .authorized:
+//                    DispatchQueue.main.async {
+//                        let window = UIWindow(windowScene: windowScene)
+//                        window.rootViewController = MainViewController()
+//                        self.window = window
+//                        window.makeKeyAndVisible()
+//                    }
+//                default: print("Not Found")
+//                }
+//            }
+//        case "kakao":
+//            print("kakao")
+//        default: break
+//        }
         
         
         
