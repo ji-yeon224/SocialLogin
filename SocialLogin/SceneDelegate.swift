@@ -18,10 +18,21 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         
         guard let windowScene = (scene as? UIWindowScene) else { return }
+        let window = UIWindow(windowScene: windowScene)
+        self.window = window
+
+        let navigationController = UINavigationController()
+        self.window?.rootViewController = navigationController
         
-        guard let platform = UserDefaults.standard.string(forKey: "Platform") else {
-            return
-        }
+        let coordinator = AppCoordinator(navController: navigationController)
+        coordinator.start()
+        
+        self.window?.makeKeyAndVisible()
+        
+        
+//        guard let platform = UserDefaults.standard.string(forKey: "Platform") else {
+//            return
+//        }
         
 //        switch platform {
 //        case "apple":

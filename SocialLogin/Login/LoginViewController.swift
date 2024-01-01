@@ -15,7 +15,7 @@ final class LoginViewController: UIViewController {
     @IBOutlet var appleLoginButton: ASAuthorizationAppleIDButton!
     
     @IBOutlet var kakaoLoginButton: UIButton!
-    
+    weak var delegate: LoginViewControllerDelegate?
     
     
     private var cancellable = Set<AnyCancellable>()
@@ -51,6 +51,7 @@ final class LoginViewController: UIViewController {
             } receiveValue: { isSuccess in
                 if isSuccess {
                     print("apple login success")
+                    self.delegate?.login()
                 } else {
                     print("apple login fail")
                 }
@@ -62,6 +63,7 @@ final class LoginViewController: UIViewController {
             } receiveValue: { isSuccess in
                 if isSuccess {
                     print("kakao login success")
+                    self.delegate?.login()
                 } else {
                     print("kakao login fail")
                 }

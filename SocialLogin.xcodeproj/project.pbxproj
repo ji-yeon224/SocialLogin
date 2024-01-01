@@ -25,6 +25,17 @@
 		CE95DEF02B3E63520073A197 /* AuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE95DEEF2B3E63520073A197 /* AuthenticationManager.swift */; };
 		CEEFDAA52B42AE260059F27D /* AppleLoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEFDAA42B42AE260059F27D /* AppleLoginManager.swift */; };
 		CEEFDAA72B42C8B80059F27D /* KakaoLoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEFDAA62B42C8B80059F27D /* KakaoLoginManager.swift */; };
+		CEEFDAAA2B42EB9E0059F27D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEFDAA92B42EB9E0059F27D /* HomeViewController.swift */; };
+		CEEFDAAD2B42EC4A0059F27D /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEFDAAC2B42EC4A0059F27D /* AppCoordinator.swift */; };
+		CEEFDAAF2B42EC590059F27D /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEFDAAE2B42EC590059F27D /* Coordinator.swift */; };
+		CEEFDAB22B42EDA90059F27D /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEFDAB12B42EDA90059F27D /* LoginCoordinator.swift */; };
+		CEEFDAB52B42F0680059F27D /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEFDAB42B42F0680059F27D /* HomeCoordinator.swift */; };
+		CEEFDAB92B42F1AF0059F27D /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = CEEFDAB82B42F1AF0059F27D /* SnapKit */; };
+		CEEFDABC2B42F2240059F27D /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = CEEFDABB2B42F2240059F27D /* RxCocoa */; };
+		CEEFDABE2B42F2240059F27D /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CEEFDABD2B42F2240059F27D /* RxSwift */; };
+		CEEFDAC02B42F2A20059F27D /* LoginViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEFDABF2B42F2A20059F27D /* LoginViewControllerDelegate.swift */; };
+		CEEFDAC22B42F3B80059F27D /* HomeViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEFDAC12B42F3B80059F27D /* HomeViewControllerDelegate.swift */; };
+		CEEFDAC42B42F5590059F27D /* LoginViewController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEFDAC32B42F5590059F27D /* LoginViewController1.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +78,14 @@
 		CE95DEEF2B3E63520073A197 /* AuthenticationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationManager.swift; sourceTree = "<group>"; };
 		CEEFDAA42B42AE260059F27D /* AppleLoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleLoginManager.swift; sourceTree = "<group>"; };
 		CEEFDAA62B42C8B80059F27D /* KakaoLoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoLoginManager.swift; sourceTree = "<group>"; };
+		CEEFDAA92B42EB9E0059F27D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		CEEFDAAC2B42EC4A0059F27D /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		CEEFDAAE2B42EC590059F27D /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		CEEFDAB12B42EDA90059F27D /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
+		CEEFDAB42B42F0680059F27D /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		CEEFDABF2B42F2A20059F27D /* LoginViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerDelegate.swift; sourceTree = "<group>"; };
+		CEEFDAC12B42F3B80059F27D /* HomeViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerDelegate.swift; sourceTree = "<group>"; };
+		CEEFDAC32B42F5590059F27D /* LoginViewController1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController1.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +93,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEEFDABC2B42F2240059F27D /* RxCocoa in Frameworks */,
 				CE128F172B3D6563007AC8F0 /* KakaoSDK in Frameworks */,
+				CEEFDABE2B42F2240059F27D /* RxSwift in Frameworks */,
+				CEEFDAB92B42F1AF0059F27D /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,6 +140,8 @@
 		CE128EE32B3D02C0007AC8F0 /* SocialLogin */ = {
 			isa = PBXGroup;
 			children = (
+				CEEFDAAB2B42EC350059F27D /* Coordinator */,
+				CEEFDAA82B42EB630059F27D /* Login */,
 				CE128F142B3D0A5D007AC8F0 /* SocialLogin.entitlements */,
 				CE128EE42B3D02C0007AC8F0 /* AppDelegate.swift */,
 				CE128EE62B3D02C0007AC8F0 /* SceneDelegate.swift */,
@@ -129,11 +153,8 @@
 				CE128F182B3D6620007AC8F0 /* .gitIgnore */,
 				CE128F1A2B3D666C007AC8F0 /* APIKey.swift */,
 				CE128F1C2B3D66CF007AC8F0 /* KakaoLoginViewController.swift */,
-				CE128F1E2B3D8675007AC8F0 /* LoginViewController.swift */,
 				CE128F202B3D8726007AC8F0 /* MainViewController.swift */,
-				CE95DEEF2B3E63520073A197 /* AuthenticationManager.swift */,
-				CEEFDAA42B42AE260059F27D /* AppleLoginManager.swift */,
-				CEEFDAA62B42C8B80059F27D /* KakaoLoginManager.swift */,
+				CEEFDAA92B42EB9E0059F27D /* HomeViewController.swift */,
 			);
 			path = SocialLogin;
 			sourceTree = "<group>";
@@ -155,6 +176,47 @@
 			path = SocialLoginUITests;
 			sourceTree = "<group>";
 		};
+		CEEFDAA82B42EB630059F27D /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				CE128F1E2B3D8675007AC8F0 /* LoginViewController.swift */,
+				CE95DEEF2B3E63520073A197 /* AuthenticationManager.swift */,
+				CEEFDAA42B42AE260059F27D /* AppleLoginManager.swift */,
+				CEEFDAA62B42C8B80059F27D /* KakaoLoginManager.swift */,
+				CEEFDAC32B42F5590059F27D /* LoginViewController1.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		CEEFDAAB2B42EC350059F27D /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				CEEFDAB32B42F05E0059F27D /* Home */,
+				CEEFDAB02B42ED9F0059F27D /* Login */,
+				CEEFDAAC2B42EC4A0059F27D /* AppCoordinator.swift */,
+				CEEFDAAE2B42EC590059F27D /* Coordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		CEEFDAB02B42ED9F0059F27D /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				CEEFDAB12B42EDA90059F27D /* LoginCoordinator.swift */,
+				CEEFDABF2B42F2A20059F27D /* LoginViewControllerDelegate.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		CEEFDAB32B42F05E0059F27D /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				CEEFDAB42B42F0680059F27D /* HomeCoordinator.swift */,
+				CEEFDAC12B42F3B80059F27D /* HomeViewControllerDelegate.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -173,6 +235,9 @@
 			name = SocialLogin;
 			packageProductDependencies = (
 				CE128F162B3D6563007AC8F0 /* KakaoSDK */,
+				CEEFDAB82B42F1AF0059F27D /* SnapKit */,
+				CEEFDABB2B42F2240059F27D /* RxCocoa */,
+				CEEFDABD2B42F2240059F27D /* RxSwift */,
 			);
 			productName = SocialLogin;
 			productReference = CE128EE12B3D02C0007AC8F0 /* SocialLogin.app */;
@@ -248,6 +313,8 @@
 			mainGroup = CE128ED82B3D02C0007AC8F0;
 			packageReferences = (
 				CE128F152B3D6563007AC8F0 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */,
+				CEEFDAB72B42F1AF0059F27D /* XCRemoteSwiftPackageReference "SnapKit" */,
+				CEEFDABA2B42F2240059F27D /* XCRemoteSwiftPackageReference "RxSwift" */,
 			);
 			productRefGroup = CE128EE22B3D02C0007AC8F0 /* Products */;
 			projectDirPath = "";
@@ -293,14 +360,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEEFDAAD2B42EC4A0059F27D /* AppCoordinator.swift in Sources */,
 				CE128F212B3D8726007AC8F0 /* MainViewController.swift in Sources */,
+				CEEFDAC42B42F5590059F27D /* LoginViewController1.swift in Sources */,
+				CEEFDAB52B42F0680059F27D /* HomeCoordinator.swift in Sources */,
+				CEEFDAC22B42F3B80059F27D /* HomeViewControllerDelegate.swift in Sources */,
+				CEEFDAB22B42EDA90059F27D /* LoginCoordinator.swift in Sources */,
+				CEEFDAAF2B42EC590059F27D /* Coordinator.swift in Sources */,
 				CE95DEF02B3E63520073A197 /* AuthenticationManager.swift in Sources */,
 				CE128F1F2B3D8675007AC8F0 /* LoginViewController.swift in Sources */,
 				CEEFDAA72B42C8B80059F27D /* KakaoLoginManager.swift in Sources */,
 				CE128EE92B3D02C0007AC8F0 /* ViewController.swift in Sources */,
 				CE128EE52B3D02C0007AC8F0 /* AppDelegate.swift in Sources */,
 				CE128F1D2B3D66CF007AC8F0 /* KakaoLoginViewController.swift in Sources */,
+				CEEFDAAA2B42EB9E0059F27D /* HomeViewController.swift in Sources */,
 				CE128F1B2B3D666C007AC8F0 /* APIKey.swift in Sources */,
+				CEEFDAC02B42F2A20059F27D /* LoginViewControllerDelegate.swift in Sources */,
 				CE128EE72B3D02C0007AC8F0 /* SceneDelegate.swift in Sources */,
 				CEEFDAA52B42AE260059F27D /* AppleLoginManager.swift in Sources */,
 			);
@@ -661,6 +736,22 @@
 				minimumVersion = 2.20.0;
 			};
 		};
+		CEEFDAB72B42F1AF0059F27D /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.0;
+			};
+		};
+		CEEFDABA2B42F2240059F27D /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.6.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -668,6 +759,21 @@
 			isa = XCSwiftPackageProductDependency;
 			package = CE128F152B3D6563007AC8F0 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
 			productName = KakaoSDK;
+		};
+		CEEFDAB82B42F1AF0059F27D /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CEEFDAB72B42F1AF0059F27D /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		CEEFDABB2B42F2240059F27D /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CEEFDABA2B42F2240059F27D /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		CEEFDABD2B42F2240059F27D /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CEEFDABA2B42F2240059F27D /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
