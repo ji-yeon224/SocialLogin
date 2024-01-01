@@ -90,6 +90,15 @@
                                     <action selector="faceIdTapped:" destination="HUQ-3E-uNt" eventType="touchUpInside" id="FNN-9d-0M7"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jLT-RZ-0jA">
+                                <rect key="frame" x="262" y="284" width="75" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="kakaoUnlink:" destination="HUQ-3E-uNt" eventType="touchUpInside" id="3g7-F0-1c4"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Kk9-eL-p3W"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
