@@ -39,7 +39,18 @@ final class LoginViewController1: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         bind()
-        view.backgroundColor = .secondarySystemBackground
+        
+        
+        guard let configuration = Bundle.main.object(forInfoDictionaryKey: "CFBundleIdentifier") as? String else {
+            print("configuration info error")
+            return
+        }
+        
+        if configuration == "com.jiyeon.SocialLoginPremium" {
+            view.backgroundColor = .gray
+        } else {
+            view.backgroundColor = .secondarySystemBackground
+        }
         
         appleButton.addTarget(self, action: #selector(appleLoginRequest), for: .touchUpInside)
         
