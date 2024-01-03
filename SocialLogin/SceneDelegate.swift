@@ -13,7 +13,7 @@ import KakaoSDKUser
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-
+    var coordinator: AppCoordinator?
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         
@@ -24,8 +24,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let navigationController = UINavigationController()
         self.window?.rootViewController = navigationController
         
-        let coordinator = AppCoordinator(navController: navigationController)
-        coordinator.start()
+        coordinator = AppCoordinator(navController: navigationController)
+        coordinator?.start()
         
         self.window?.makeKeyAndVisible()
         
